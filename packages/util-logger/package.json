@@ -1,0 +1,36 @@
+{
+  "name": "@ehitco/util-logger",
+  "private": true,
+  "version": "1.0.0",
+  "sideEffects": [
+    "dist/*"
+  ],
+  "scripts": {
+    "start": "concurrently -n es,dts \"vite build --watch\"  \"tsc --emitDeclarationOnly --project tsconfig.build.json --watch\"",
+    "build": "npm run build:type && vite build",
+    "build:type": "npm run clear:type && tsc --declaration --emitDeclarationOnly --project tsconfig.build.json",
+    "clear:type": "rimraf ./types"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./*": "./*"
+  },
+  "devDependencies": {
+    "typescript": "4.8.4",
+    "vite": "^3.2.2",
+    "rimraf": "3.0.2"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.5"
+  }
+}

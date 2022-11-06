@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "types",
+    "forceConsistentCasingInFileNames": true, // 区分文件名大小些
+    "paths": {},
+  },
+  "include": [
+		"src"
+	],
+}
