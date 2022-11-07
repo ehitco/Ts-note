@@ -1,4 +1,4 @@
-/* Copyright 2022, HST. */
+/* Copyright 2022, Aiden. */
 
 module.exports = {
     root: true,
@@ -41,7 +41,7 @@ module.exports = {
 
         'tsdoc/syntax': 'off',
 
-        'header/header': ['error', 'block', ' Copyright 2022, HST. '],
+        'header/header': ['error', 'block', ' Copyright 2022, Aiden. '],
     },
     settings: {
         react: {
